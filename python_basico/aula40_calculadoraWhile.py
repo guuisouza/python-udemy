@@ -14,6 +14,9 @@ while True:
     operador = input("Digite a operação que você quer fazer (+-/*): ")
 
     numeros_sao_validos = None # Flag - Bandeira
+    #Declarando a variável fora do bloco
+    numero1_float = 0
+    numero2_float = 0
 
     try:
         numero1_float = float(numero1)
@@ -37,6 +40,17 @@ while True:
         continue
 
     ## Fazer as contas agora!
+    if operador == "+":
+        print(f'O resultado da soma é: {numero1_float + numero2_float}')
+    elif operador == "-":
+        print(f'O resultado da subtração é: {numero1_float - numero2_float}')
+    elif operador == "/":
+        print(f'O resultado da divisão é: {numero1_float / numero2_float}')
+    elif operador == "*":
+        print(f'O resultado da multiplicação é: {numero1_float * numero2_float}')
+    else:
+        print("Não deveria chegar aqui...")
+
 
     sair = input("Deseja sair? [s]im: ").lower().startswith('s')
     if sair is True:
