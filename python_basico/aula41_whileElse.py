@@ -5,7 +5,7 @@
 string = "Valor qualquer"
 print(len(string))
 
-# Pra que seria um uso desse else:
+# Pra que seria um uso desse else :
 
 i = 0
 while i < len(string):
