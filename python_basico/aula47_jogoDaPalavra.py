@@ -21,7 +21,7 @@ palavra_secreta = "ambiente"
 print("Seja bem vindo ao jogo da palavra secreta, você deverá adivinhar ela")
 
 letra_do_usuario = ''
-palavra_do_usuario = ''
+letras_acertadas = ''
 palavra_final = ''
 tentativas = 0
 
@@ -34,11 +34,11 @@ while palavra_final != palavra_secreta:
         continue
     
     if letra_do_usuario in palavra_secreta:
-        palavra_do_usuario += letra_do_usuario # Mantém na palavra_do_usuario o que ele já acertou
+        letras_acertadas += letra_do_usuario # Mantém na letras_acertada o que ele já acertou
         
     palavra_formada = ''
     for letra in palavra_secreta: # Percorre cada letra da palavra secreta
-        if letra in palavra_do_usuario: # Se a letra atual da palavra secreta tiver o que ele já acertou
+        if letra in letras_acertadas: # Se a letra atual da palavra secreta tiver o que ele já acertou
             palavra_formada += letra
         else:
             palavra_formada += '*'
